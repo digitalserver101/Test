@@ -1,0 +1,28 @@
+<%-
+  include('layout', {
+    title: 'Register',
+    isAuthPage: true,
+    body: `
+  <section class="card auth-card">
+    <h2>Create account</h2>
+    ${message ? `<p class="message">${message}</p>` : ''}
+    <form method="post" action="/register">
+      <label>
+        Username
+        <input type="text" name="username" required />
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" required />
+      </label>
+      <label>
+        Password
+        <input type="password" name="password" required />
+      </label>
+      <button type="submit">Register</button>
+    </form>
+  </section>
+`
+  })
+%>
+

@@ -1,0 +1,28 @@
+<%-
+  include('layout', {
+    title: 'Reset password',
+    isAuthPage: true,
+    body: `
+  <section class="card auth-card">
+    <h2>Reset password</h2>
+    ${message ? `<p class="message">${message}</p>` : ''}
+    <form method="post" action="/reset">
+      <label>
+        Username
+        <input type="text" name="username" required />
+      </label>
+      <label>
+        Reset code
+        <input type="text" name="token" maxlength="4" pattern="\\d{4}" required />
+      </label>
+      <label>
+        New password
+        <input type="password" name="newPassword" required />
+      </label>
+      <button type="submit">Update password</button>
+    </form>
+  </section>
+`
+  })
+%>
+

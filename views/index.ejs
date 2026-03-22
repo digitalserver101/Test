@@ -1,0 +1,29 @@
+<%- include('layout', { title: 'Home', username: typeof username !== 'undefined' ? username : null, isLanding: true, body: `
+  <section class="hero">
+    <h2>Welcome to Our Platform</h2>
+    <p class="lead">We provide tools and resources to help you get started. Explore our services and stay up to date with the latest news and tips on our blog.</p>
+  </section>
+  <section class="content-block">
+    <h3>About Us</h3>
+    <p>We are a small team focused on building useful tools and sharing knowledge. Our platform is designed to be simple and reliable. We believe in clear communication and continuous improvement based on real user feedback.</p>
+    <p>Whether you are exploring for the first time or you have been with us for a while, we aim to make your experience straightforward and helpful.</p>
+  </section>
+  <section class="content-block">
+    <h3>Our Blog</h3>
+    <article class="blog-card">
+      <h4>Getting Started: Tips for New Users</h4>
+      <p class="blog-meta">March 2025</p>
+      <p>New to the platform? Here are a few tips to help you find your way around and make the most of the available features. We cover the basics and point you to more advanced options when you are ready.</p>
+    </article>
+    <article class="blog-card">
+      <h4>Updates and New Features</h4>
+      <p class="blog-meta">February 2025</p>
+      <p>This month we shipped several improvements based on your feedback. Performance has been improved on key pages, and we have added more options for customising your workspace.</p>
+    </article>
+    <article class="blog-card">
+      <h4>Why We Care About Simplicity</h4>
+      <p class="blog-meta">January 2025</p>
+      <p>We often get asked why we keep the interface minimal. The short answer: we want you to spend less time learning the tool and more time doing the work that matters to you.</p>
+    </article>
+  </section>
+` }) %>

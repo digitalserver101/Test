@@ -1,0 +1,23 @@
+<%-
+  include('layout', {
+    title: 'Forgot password',
+    isAuthPage: true,
+    body: `
+  <section class="card auth-card">
+    <h2>Forgot password</h2>
+    ${message ? `<p class="message">${message}</p>` : ''}
+    <form method="post" action="/forgot">
+      <label>
+        Username
+        <input type="text" name="username" required />
+      </label>
+      <button type="submit">Send reset code</button>
+    </form>
+    <p class="muted">
+      If an account exists for that username, a reset code will be sent.
+    </p>
+  </section>
+`
+  })
+%>
+

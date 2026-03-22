@@ -1,0 +1,16 @@
+<%-
+  include('layout', {
+    title: 'Home',
+    username,
+    body: `
+  <section class="card">
+    <h2>Welcome${username ? `, ${username}` : ''}</h2>
+    <p>
+      This is a deliberately vulnerable training portal with a simple
+      authentication flow and password reset feature.
+    </p>
+  </section>
+`
+  })
+%>
+
